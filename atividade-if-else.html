@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Atividade if</h2>
+    <label for="numero">Hora</label><br>
+    <input type="text" id="numero">
+    <br><br>
+
+    <button onclick="capturaDados()">Capturar dado</button>
+
+    <script>
+        function capturaDados() {
+            const hora = document.getElementById('numero');
+
+            if (hora.value > 6 && hora.value < 14) {
+                alert(`primeiro turno, hora ${hora.value}`);
+            } else if (hora.value > 14 && hora.value < 22) {
+                alert(`segundo turno, hora ${hora.value}`);
+            } else {
+                alert(`turno não determindado, hora ${hora.value}`);
+            }
+        }
+    </script>
+</body>
+
+</html>
