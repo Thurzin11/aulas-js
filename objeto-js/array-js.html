@@ -13,12 +13,23 @@
 
     <script>
         const nomes = ["João", "Ana", "Caio", "Lara", "Marjorie", "Leo"];
-        console.log(nomes);
-        nomes.push("Rodrigo");
         console.log(nomes.toString());
-        let meuNome = 'Arthur'
-        nomes.splice(1, 0, meuNome);
-        console.log(nomes)
+        nomes.push("Rodrigo");
+        nomes.unshift("Zé aldo");
+        console.log(nomes.toString());
+        // push adiciona no final do array e o unshift adiciona no comeco
+        nomes.pop();
+        nomes.shift();
+        console.log(nomes.toString());
+        // pop remove no final do array e o shift remove no final
+        const posAna = nomes.indexOf('Ana');
+        console.log(`Posicao da Ana = ${posAna}`);
+        // indexOf buscar o indice de um vetor no array
+        nomes.splice(1, 0, 'Arthur');
+        console.log(nomes.toString());
+
+        
+        
         
     </script>
 </body>
