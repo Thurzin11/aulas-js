@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Atividade diltrar array</h2>
+
+    <script>
+        let frutas = [];
+        
+        frutas[0] = {nome: 'banana', cor: 'amarelo'};
+        frutas[1] = {nome: 'uva', cor: 'roxo'};
+        frutas[2] = {nome: 'pera', cor: 'amarelo'};
+        frutas[3] = {nome: 'uva', cor: 'verde'};
+
+        let validaFruta = frutas.filter(function(fruta){
+            return fruta.nome === 'uva' && fruta.cor === 'verde';
+        });
+
+        console.log(validaFruta);        
+    </script>
+</body>
+</html>

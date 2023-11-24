@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Atividade JavaScript</h2>
+    <label for="nome"></label>
+    <input type="text" id="nome">
+
+    <button type="button" id="btn-last">Adicionar no final</button>
+    <button type="button" id="btn-first">Adicionar no Inicio</button>
+    <button type="button" id="btn-remove-last">Remover ultimo valor</button>
+    <button type="button" id="btn-remove-first">Remover primeiro valor</button>
+    <div id="res"></div>
+
+    <script>
+        let nomes = [];
+        const btnRemoveFirst = document.querySelector('#btn-remove-first');
+        const btnRemoveLast = document.querySelector('#btn-remove-last');
+        const btnFirst = document.querySelector('#btn-first');
+        const btnLast = document.querySelector('#btn-last');
+        const inpt = document.querySelector('#nome');
+        const res = document.querySelector('#res');
+
+        btnFirst.addEventListener('click', () => {
+            capturaPrimeiro();
+            res.innerHTML = nomes;
+        });
+
+        btnLast.addEventListener('click', () => {
+            capturaUltimo();
+            res.innerHTML = nomes;
+        });
+
+        btnRemoveLast.addEventListener('click', () => {
+            removeUltimo();
+            res.innerHTML = nomes;
+        });
+
+        btnRemoveFirst.addEventListener('click', () => {
+            removePrimeiro();
+            res.innerHTML = nomes;
+        });
+
+        function capturaPrimeiro() {
+            nomes.unshift(inpt.value);
+            console.log(nomes.toString());
+            res.innerHTML = nomes;
+            inpt.value = '';
+        }
+
+        function capturaUltimo() {
+            nomes.push(inpt.value);
+            console.log(nomes.toString());
+            res.innerHTML = nomes;
+            inpt.value = '';
+        }
+
+        function removeUltimo() {
+            nomes.pop();
+            console.log(nomes.toString());
+            res.innerHTML = nomes;
+        }
+
+        function removePrimeiro() {
+            nomes.shift();
+            console.log(nomes.toString());
+            res.innerHTML = nomes;  
+        }
+
+    </script>
+</body>
+
+</html>
