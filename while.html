@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="Informe um numero" id="inpt">
+    <button id="botao">Enviar</button>
+    <div id='res'>
+
+    </div>
+    <script>
+        const input = document.querySelector('#inpt')
+        const res = document.querySelector('#res');
+        const btn = document.querySelector('#botao');
+        btn.addEventListener('click', ()=>{
+            parImpar();
+        })
+        function parImpar(){
+            let inputInt = parseInt(input.value);
+            res.innerHTML = '';
+            let cont=0;
+            while(cont<=inputInt){
+                if(cont % 2 == 0){
+                    res.innerHTML += `<h2>Esse numero é par ${cont}</h2>`
+                }else{
+                    res.innerHTML += `<h2>Esse numero é impar ${cont}</h2>`
+                }
+                cont++;
+            }    
+        }
+    </script>
+</body>
+</html>

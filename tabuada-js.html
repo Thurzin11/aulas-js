@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Tabuada</h2>
+    <input type="text" placeholder="Informe a tabuada" id="inpt">
+    <button id="botao">Enviar</button>
+    <div id="res">
+        
+    </div>
+    <script>
+        const input = document.querySelector('#inpt')
+        const res = document.querySelector('#res');
+        const btn = document.querySelector('#botao');
+        btn.addEventListener('click', ()=>{
+            tabuada();
+        })
+        
+        function tabuada(){
+            let inputInt = parseInt(input.value);
+            res.innerHTML = '';
+            for(let tab = 0; tab<=10; tab++){
+                res.innerHTML += `<h2>${inputInt} + ${tab} = ${tab*inputInt}</h2>`;
+            }    
+        }
+    </script>
+</body>
+</html>

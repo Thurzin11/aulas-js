@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <label for="mes">Mes</label>
+    
+    <select name="" id="mes">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+    </select>
+
+    <button id="botao" onclick="descobrirMes()">Enviar</button>
+    <h2 id="res">
+
+    </h2>
+    <script>
+        const input = document.querySelector('#mes');
+        const res = document.querySelector('#res');
+        const btn = document.querySelector('#botao');
+        btn.addEventListener('click', ()=>{
+            descobrirMes;
+        })
+
+        function descobrirMes(){
+            let mes = parseInt(input.value);
+            switch(mes){
+                case 1:
+                alert('Mes que voce digitou é Janeiro');
+                res.innerHTML = 'Janeiro' ;
+                break;
+                case 2:
+                alert('Mes que voce digitou é Fevereiro');
+                res.innerHTML = 'Fevereiro' ;
+                break;
+                case 3:
+                alert('Mes que voce digitou é Março');
+                res.innerHTML = 'Março' ;
+                break;
+                case 4:
+                alert('Mes que voce digitou é Abril');
+                res.innerHTML = 'Abril' ;
+                break;
+                case 5:
+                alert('Mes que voce digitou é Maio');
+                res.innerHTML = 'Maio' ;
+                break;
+                case 6:
+                alert('Mes que voce digitou é Junho');
+                res.innerHTML = 'Junho' ;
+                break;
+                case 7:
+                alert('Mes que voce digitou é Julho');
+                res.innerHTML = 'Julho' ;
+                break;
+                case 8:
+                alert('Mes que voce digitou é Agosto');
+                res.innerHTML = 'Agosto' ;
+                break;
+                case 9:
+                alert('Mes que voce digitou é Setembro');
+                res.innerHTML = 'Setembro' ;
+                break;
+                case 10:
+                alert('Mes que voce digitou é Outubro');
+                res.innerHTML = 'Outubro' ;
+                break;
+                case 11:
+                alert('Mes que voce digitou é Novembro');
+                res.innerHTML = 'Novembro' ;
+                break;
+                case 12:
+                alert('Mes que voce digitou é Dezembro');
+                res.innerHTML = 'Dezembro' ;
+                break;
+                default:
+                    alert('Mes Invalido');   
+                    res.innerHTML = 'Mes Invalido' ;             
+            }
+        }
+
+        
+    </script>
+</body>
+</html>
